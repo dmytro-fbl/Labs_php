@@ -49,15 +49,43 @@ if(!preg_match("/^[а-яіїєґ]$/u", $letterToLower)){
         case 'я':
         case 'ю':
         case 'и':
-            echo 'Голосна літера';
+            echo "Голосна літера: $letter";
             break;
         default:
-            echo "Приголосна літера";
+            echo "Приголосна літера: $letter";
     }
 }
 
 echo '<br><br>Завдання 6<br>';
 
+$randomNumber = mt_rand(100, 999);
+$sum = 0;
+$min = 0;
+$newCountArray = [];
+$newCount = '';
+$maxCount = '';
+echo "$randomNumber<br>";
 
+for($i = 0; $i < 3; $i++){
+    $remainder = $randomNumber % 10;
+    if($remainder <= $min){
+        $min = $remainder;
+        $maxCount = $maxCount . $remainder;
+    }
+    else{
+        $min = $remainder;
+        $maxCount = $remainder . $maxCount;
+    }
+    $newNumber = ($randomNumber - $remainder) / 10;
+    $randomNumber = $newNumber;
+    $newCount .= $remainder;
+    $newCountArray[$i] = $remainder;
 
+    $sum += $remainder;
+}
+sort($newCountArray);
+$maxCount = $newCountArray[2] . $newCountArray[1] . $newCountArray[0];
+echo "Сума: $sum<br>";
+echo "Число навпаки: $newCount<br>";
+echo "Максимальне число: $maxCount";
 ?>
