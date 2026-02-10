@@ -8,9 +8,9 @@ echo "Полину в мріях в купель океану,<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; мене<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; вони...";
 
-echo '<br>Завдання 3<br>';
+echo '<br><br>Завдання 3<br>';
 $uan = 1500;
 $usd = 43;
 $result = round($uan/$usd);
-echo "$uan грн. Можна обміняти на $result доларів<br>";
-?>
+echo "$uan грн. Можна обміняти на $result доларів";
+
