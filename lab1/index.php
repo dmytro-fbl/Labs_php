@@ -31,4 +31,33 @@ if($numberMonth < 1 || $numberMonth > 12 || !is_int($numberMonth)) {
     }
 }
 
+
+echo '<br><br>Завдання 5<br>';
+$letter = 'и';
+$letterToLower = mb_strtolower($letter, 'UTF-8');
+if(!preg_match("/^[а-яіїєґ]$/u", $letterToLower)){
+    echo "Це не літера";
+}else{
+    switch ($letterToLower){
+        case 'а':
+        case 'о':
+        case 'у':
+        case 'е':
+        case 'ї':
+        case 'і':
+        case 'є':
+        case 'я':
+        case 'ю':
+        case 'и':
+            echo 'Голосна літера';
+            break;
+        default:
+            echo "Приголосна літера";
+    }
+}
+
+echo '<br><br>Завдання 6<br>';
+
+
+
 ?>
