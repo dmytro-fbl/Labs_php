@@ -88,4 +88,48 @@ $maxCount = $newCountArray[2] . $newCountArray[1] . $newCountArray[0];
 echo "Сума: $sum<br>";
 echo "Число навпаки: $newCount<br>";
 echo "Максимальне число: $maxCount";
+
+echo '<br><br>Завдання 7<br>';
+
+function table($rows, $cols){
+    echo '<table border="1">';
+    for($i = 0; $i < $rows; $i++){
+        echo '<tr>';
+        for($j = 0; $j < $cols; $j++){
+            $r = mt_rand(0, 255);
+            $g = mt_rand(0, 255);
+            $b = mt_rand(0, 255);
+            $color = "rgb($r, $g, $b)";
+            echo "<td style='background-color:$color;width: 20px; height: 20px'></td>";
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
+}
+function square($n){
+
+echo "<div style='position: relative; width: 1200px;
+            height: 400px; background-color: black'>";
+for($i = 0; $i < $n; $i++){
+    $size = mt_rand(10, 50);
+    $top = mt_rand(10, 350);
+    $left = mt_rand(10, 80);
+    echo "<div style='position: absolute;
+ width: $size;
+  height: $size;
+   background-color: red;
+   top: {$top}px;
+   left: {$left}%;
+   border: 1px solid black;'
+   ></div>";
+}
+echo "</div>";
+
+
+
+
+}
+
+table(4,6);
+square(4);
 ?>
