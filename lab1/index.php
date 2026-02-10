@@ -14,3 +14,21 @@ $usd = 43;
 $result = round($uan/$usd);
 echo "$uan грн. Можна обміняти на $result доларів";
 
+
+echo '<br><br>Завдання 4<br>';
+$numberMonth = (int)6;
+if($numberMonth < 1 || $numberMonth > 12 || !is_int($numberMonth)) {
+    echo 'Невірно вказане число місяця';
+}else{
+    if($numberMonth <= 2 || $numberMonth == 12){
+        echo 'Winter';
+    }else if($numberMonth > 2 && $numberMonth <= 5){
+        echo 'Spring';
+    }else if($numberMonth > 5 && $numberMonth <= 8){
+        echo 'Summer';
+    }else if($numberMonth > 8 && $numberMonth <= 11){
+        echo 'Autumn';
+    }
+}
+
+?>
