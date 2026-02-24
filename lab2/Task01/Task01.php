@@ -134,5 +134,7 @@ if (isset($_POST["checkPasswordSubmit"])) {
     <?php endif; ?>
 <?php endif; ?>
 <a href="index.html">Назад до завдань</a>
+
+
 </body>
 </html>
