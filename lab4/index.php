@@ -3,6 +3,9 @@ require_once('Utils/autoload.php');
 
 use Controllers\UserController;
 use Models\Circle;
+use Models\Human;
+use Models\Programmer;
+use Models\Student;
 use Views\UserView;
 use Models\UserModel;
 
@@ -67,5 +70,79 @@ foreach ($files as $i => $file){
     echo "<br>Очищений файл $file: " . FileOperations::readFile($file);
     $someText = "Привіт<br>";
     FileOperations::writeFile($file, $someText);
+}
+
+echo "<br><br>Завдання 8<br>";
+
+$human = new Human(167, 60, 18);
+$student = new Student(180, 70, 16, 'Житомирська політехніка', 3);
+$programmer = new Programmer(176, 65, 20, ['C++', 'C#'], 4);
+
+echo 'Людина1<br>';
+echo 'Зріст: ' . $human->getHeight() . "<br>";
+echo 'Вага: ' . $human->getWeight() . "<br>";
+echo 'Вік: ' . $human->getAge() . "<br>";
+
+$human->setHeight(190);
+$human->setWeight(90);
+$human->setAge(30);
+
+echo '<br>Людина2<br>';
+echo 'Зріст: ' . $human->getHeight() . "<br>";
+echo 'Вага: ' . $human->getWeight() . "<br>";
+echo 'Вік: ' . $human->getAge() . "<br>";
+
+echo 'Студент1<br>';
+echo 'Зріст: ' . $student->getHeight() . "<br>";
+echo 'Вага: ' . $student->getWeight() . "<br>";
+echo 'Вік: ' . $student->getAge() . "<br>";
+echo ' Курс: ' . $student->getCourse() . "<br>";
+echo 'Вищий навчальний заклад: ' . $student->getVNZ() . "<br>";
+
+$student->setHeight(180);
+$student->setWeight(73);
+$student->setAge(56);
+$student->setCourse(1);
+$student->setVNZ('Поліський');
+
+echo '<br>Студент2<br>';
+echo 'Зріст: ' . $student->getHeight() . "<br>";
+echo 'Вага: ' . $student->getWeight() . "<br>";
+echo 'Вік: ' . $student->getAge() . "<br>";
+echo 'Курс: ' . $student->getCourse() . "<br>";
+echo 'Вищий навчальний заклад: ' . $student->getVNZ() . "<br>";
+
+$student->upCourse();
+echo 'Збільшення курсу: ' . $student->getCourse() . "<br>";
+
+echo '<br>Програміст1<br>';
+echo 'Зріст: ' . $human->getHeight() . "<br>";
+echo 'Вага: ' . $human->getWeight() . "<br>";
+echo 'Вік: ' . $human->getAge() . "<br>";
+echo 'Вивчені мови програмування: ';
+foreach ($programmer->getArrLanguage() as $lang) {
+    echo $lang . " ";
+}
+echo '<br>Досвід роботи: ' . $programmer->getExperience() . '<br>';
+
+$programmer->setHeight(169);
+$programmer->setWeight(67);
+$programmer->setAge(37);
+$programmer->setExperience(8);
+$programmer->setArrLanguage(['python', 'javascript']);
+
+echo '<br>Програміст2<br>';
+echo 'Зріст: ' . $human->getHeight() . "<br>";
+echo 'Вага: ' . $human->getWeight() . "<br>";
+echo 'Вік: ' . $human->getAge() . "<br>";
+echo 'Вивчені мови програмування: ';
+foreach ($programmer->getArrLanguage() as $lang) {
+    echo $lang . " ";
+}
+echo '<br>Досвід роботи: ' . $programmer->getExperience() . '<br>';
+$programmer->addLanguage('Go');
+
+foreach ($programmer->getArrLanguage() as $lang) {
+    echo $lang . " ";
 }
 ?>
