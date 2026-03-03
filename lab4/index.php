@@ -147,6 +147,16 @@ foreach ($programmer->getArrLanguage() as $lang) {
     echo $lang . " ";
 }
 
+
+echo "<br><br>Завдання 9<br>";
 echo '<br>' . $student->birthChild() . '<br>';
 echo '<br>' . $programmer->birthChild() . '<br>';
+
+
+echo "<br><br>Завдання 10<br>";
+
+echo '<br>' . $student->cleanRoom() . '<br>';
+echo '<br>' . $student->cleanKitchen() . '<br>';
+echo '<br>' . $programmer->cleanRoom() . '<br>';
+echo '<br>' . $programmer->cleanKitchen() . '<br>';
 ?>

@@ -2,7 +2,9 @@
 
 namespace Models;
 
-abstract class Human
+use Interfaces\ICleanHouse;
+
+abstract class Human implements ICleanHouse
 {
     private $height;
     private $weight;
@@ -65,5 +67,8 @@ abstract class Human
         return $this->birthChildMessage();
     }
     abstract protected function birthChildMessage() : string;
+
+    abstract public function cleanRoom(): string;
+    abstract public function cleanKitchen(): string;
 
 }

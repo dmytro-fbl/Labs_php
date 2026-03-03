@@ -49,4 +49,13 @@ class Student extends Human
     {
         return 'День народження студента';
     }
+
+    function cleanRoom() : string
+    {
+        return 'Студент прибирає кімнату';
+    }
+    function cleanKitchen() : string
+    {
+        return 'Студент прибирає кухню';
+    }
 }

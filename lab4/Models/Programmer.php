@@ -44,4 +44,13 @@ class Programmer extends Human
         return 'День народження програміста';
     }
 
+    function cleanRoom() : string
+    {
+        return 'Програміст прибирає кімнату';
+    }
+    function cleanKitchen() : string
+    {
+        return 'Програміст прибирає кухню';
+    }
+
 }
