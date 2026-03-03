@@ -1,7 +1,5 @@
 <?php
-require_once 'Models/UserModel.php';
-require_once 'Controllers/UserController.php';
-require_once 'Views/UserView.php';
+require_once('Utils/autoload.php');
 
 use Controllers\UserController;
 use Views\UserView;
