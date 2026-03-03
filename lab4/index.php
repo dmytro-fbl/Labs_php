@@ -42,4 +42,30 @@ echo "Перевірка першого кола з початковим: " . va
 $circle2 = new Circle(2,2,2);
 echo "Перевірка першого кола з початковим: " . var_export($circle->isCrossing($circle2), true) . "<br>";
 
+
+echo "<br>Завдання 7<br>";
+
+require 'Utils/FileOperations.php';
+$files = [
+    'file1.txt',
+    'file2.txt',
+    'file3.txt',
+];
+foreach ($files as $file) {
+    echo "Зчитування з файлу $file<br>";
+    echo FileOperations::readFile($file);
+}
+
+foreach ($files as $i => $file) {
+    $someText = "Текст файлу з назвою $file<br>";
+    FileOperations::writeFile($file, $someText);
+    echo "Оновлений файл з записами: " . FileOperations::readFile($file);
+}
+
+foreach ($files as $i => $file){
+    FileOperations::deleteFile($file);
+    echo "<br>Очищений файл $file: " . FileOperations::readFile($file);
+    $someText = "Привіт<br>";
+    FileOperations::writeFile($file, $someText);
+}
 ?>
