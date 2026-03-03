@@ -4,9 +4,9 @@ namespace Models;
 
 class Circle
 {
-    public $coordX;
-    public $coordY;
-    public $radius;
+    private $coordX;
+    private $coordY;
+    private $radius;
 
     public function __construct($coordX, $coordY, $radius){
         $this->coordX = $coordX;
@@ -40,4 +40,16 @@ class Circle
         return "<br>Коло з центром в ($this->coordX, $this->coordY) і радіусом $this->radius<br>";
     }
 
+    public function isCrossing(Circle $circleNew): bool
+    {
+
+
+        $dx = ($this->coordX - $circleNew->coordX);
+        $dy = ($this->coordY - $circleNew->coordY);
+        $distanceSq = $dx * $dx + $dy * $dy;
+
+        $radiusSum = $circleNew->radius + $this->radius;
+        $radiusSumSq = $radiusSum * $radiusSum;
+        return $distanceSq <= $radiusSumSq;
+    }
 }

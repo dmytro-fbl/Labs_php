@@ -16,10 +16,9 @@ $userController->printController();
 $userView->printView();
 $userModel->printModel();
 
-//5
-$circle = new Circle(3, 4, 5);
 
 echo "<br>Завдання 5<br>";
+$circle = new Circle(3, 4, 5);
 echo "<br>" . "Координата Х: " . $circle->getCoordX() . "<br>";
 echo "Координата Y: " . $circle->getCoordY() . "<br>";
 echo "Радіус: " . $circle->getRadius() . "<br>";
@@ -35,5 +34,12 @@ echo "Новий Радіус: " . $circle->getRadius() . "<br>";
 
 echo $circle->__toString();
 
+
+echo "<br>Завдання 6<br>";
+$circle1 = new Circle(10, 18, 34);
+echo "Перевірка першого кола з початковим: " . var_export($circle->isCrossing($circle1), true) . "<br>";
+
+$circle2 = new Circle(2,2,2);
+echo "Перевірка першого кола з початковим: " . var_export($circle->isCrossing($circle2), true) . "<br>";
 
 ?>
