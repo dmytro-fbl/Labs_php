@@ -39,5 +39,9 @@ class Programmer extends Human
     public function addLanguage($lang) : void{
         $this->arrLanguage[] = $lang;
     }
+    protected function birthChildMessage(): string
+    {
+        return 'День народження програміста';
+    }
 
 }

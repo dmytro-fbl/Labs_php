@@ -2,7 +2,7 @@
 
 namespace Models;
 
-class Human
+abstract class Human
 {
     private $height;
     private $weight;
@@ -60,5 +60,10 @@ class Human
         }
 
     }
+    public function birthChild() : string
+    {
+        return $this->birthChildMessage();
+    }
+    abstract protected function birthChildMessage() : string;
 
 }

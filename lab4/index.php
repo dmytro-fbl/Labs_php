@@ -74,23 +74,24 @@ foreach ($files as $i => $file){
 
 echo "<br><br>Завдання 8<br>";
 
-$human = new Human(167, 60, 18);
+
 $student = new Student(180, 70, 16, 'Житомирська політехніка', 3);
 $programmer = new Programmer(176, 65, 20, ['C++', 'C#'], 4);
 
-echo 'Людина1<br>';
-echo 'Зріст: ' . $human->getHeight() . "<br>";
-echo 'Вага: ' . $human->getWeight() . "<br>";
-echo 'Вік: ' . $human->getAge() . "<br>";
-
-$human->setHeight(190);
-$human->setWeight(90);
-$human->setAge(30);
-
-echo '<br>Людина2<br>';
-echo 'Зріст: ' . $human->getHeight() . "<br>";
-echo 'Вага: ' . $human->getWeight() . "<br>";
-echo 'Вік: ' . $human->getAge() . "<br>";
+//$human = new Human(167, 60, 18);
+//echo 'Людина1<br>';
+//echo 'Зріст: ' . $human->getHeight() . "<br>";
+//echo 'Вага: ' . $human->getWeight() . "<br>";
+//echo 'Вік: ' . $human->getAge() . "<br>";
+//
+//$human->setHeight(190);
+//$human->setWeight(90);
+//$human->setAge(30);
+//
+//echo '<br>Людина2<br>';
+//echo 'Зріст: ' . $human->getHeight() . "<br>";
+//echo 'Вага: ' . $human->getWeight() . "<br>";
+//echo 'Вік: ' . $human->getAge() . "<br>";
 
 echo 'Студент1<br>';
 echo 'Зріст: ' . $student->getHeight() . "<br>";
@@ -116,9 +117,9 @@ $student->upCourse();
 echo 'Збільшення курсу: ' . $student->getCourse() . "<br>";
 
 echo '<br>Програміст1<br>';
-echo 'Зріст: ' . $human->getHeight() . "<br>";
-echo 'Вага: ' . $human->getWeight() . "<br>";
-echo 'Вік: ' . $human->getAge() . "<br>";
+echo 'Зріст: ' . $programmer->getHeight() . "<br>";
+echo 'Вага: ' . $programmer->getWeight() . "<br>";
+echo 'Вік: ' . $programmer->getAge() . "<br>";
 echo 'Вивчені мови програмування: ';
 foreach ($programmer->getArrLanguage() as $lang) {
     echo $lang . " ";
@@ -132,9 +133,9 @@ $programmer->setExperience(8);
 $programmer->setArrLanguage(['python', 'javascript']);
 
 echo '<br>Програміст2<br>';
-echo 'Зріст: ' . $human->getHeight() . "<br>";
-echo 'Вага: ' . $human->getWeight() . "<br>";
-echo 'Вік: ' . $human->getAge() . "<br>";
+echo 'Зріст: ' . $programmer->getHeight() . "<br>";
+echo 'Вага: ' . $programmer->getWeight() . "<br>";
+echo 'Вік: ' . $programmer->getAge() . "<br>";
 echo 'Вивчені мови програмування: ';
 foreach ($programmer->getArrLanguage() as $lang) {
     echo $lang . " ";
@@ -145,4 +146,7 @@ $programmer->addLanguage('Go');
 foreach ($programmer->getArrLanguage() as $lang) {
     echo $lang . " ";
 }
+
+echo '<br>' . $student->birthChild() . '<br>';
+echo '<br>' . $programmer->birthChild() . '<br>';
 ?>

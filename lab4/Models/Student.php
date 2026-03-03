@@ -44,4 +44,9 @@ class Student extends Human
             $this->setCourse($this->course + 1);
         }
     }
+
+    protected function birthChildMessage(): string
+    {
+        return 'День народження студента';
+    }
 }
