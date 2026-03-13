@@ -39,7 +39,7 @@ if ($msg == 'login') {
     <img src="<?php echo htmlspecialchars($user['avatar_url'])?>" alt="Аватар" style="width: 200px; height: 200px"><br>
 
 <p>Редагувати профіль</p>
-<?php include 'Views/update.php'?>
+<?php include 'Views/update.php' ?>
 
 <a href="handler.php?page=logout">Вийти з акаунту</a>
 <a href="handler.php?page=delete">Видалити Акаунт</a>
