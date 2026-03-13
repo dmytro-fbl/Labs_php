@@ -17,4 +17,5 @@ try {
     } catch (PDOException $e) {
     echo "Помилка Підключення: " . $e->getMessage();
 }
+
 ?>
